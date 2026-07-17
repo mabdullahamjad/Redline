@@ -1,0 +1,95 @@
+Act as a senior Staff Software Engineer performing a production-grade refactor.
+
+Review the existing codebase and implement the following improvements in one refactoring pass while preserving all current functionality.
+
+==========================
+1. SERVER-SIDE ADMIN SECURITY
+==========================
+
+Do NOT rely on UI-only role checks.
+
+Ensure all admin-only actions are enforced on the server.
+
+Review every endpoint, server action, API route, Supabase function, and mutation.
+
+For every admin operation:
+
+• Verify the authenticated user.
+• Verify the user's role.
+• Return proper authorization errors (403/401) when necessary.
+• Remove any client-side trust assumptions.
+
+Follow security best practices.
+
+==========================
+2. REMOVE UNUSED CODE
+==========================
+
+Clean the project without changing functionality.
+
+Remove:
+
+• unused shadcn/ui components
+• unused Supabase server clients
+• unused imports
+• dead code
+• duplicate utilities
+• duplicate components
+• obsolete files
+• unnecessary dependencies where safe
+
+Keep the project behavior identical.
+
+==========================
+3. REFACTOR LARGE COMPONENTS
+==========================
+
+Find oversized components (especially the large sidebar component).
+
+Split them into small reusable components.
+
+Examples:
+
+Sidebar
+├── SidebarHeader
+├── SidebarNavigation
+├── SidebarFooter
+├── UserProfile
+├── MarketSelector
+
+Use proper composition.
+
+Avoid prop drilling where possible.
+
+Improve readability.
+
+==========================
+GENERAL REQUIREMENTS
+==========================
+
+• Preserve all existing functionality.
+• Do not redesign the UI.
+• Do not add new features.
+• Keep styling identical.
+• Improve maintainability.
+• Follow React + TypeScript best practices.
+• Improve naming consistency.
+• Remove duplicated logic.
+• Keep components modular.
+• Ensure everything still compiles.
+
+==========================
+AFTER COMPLETING
+==========================
+
+Provide a summary including:
+
+• Files modified
+• Files deleted
+• Components extracted
+• Security improvements made
+• Performance improvements
+• Remaining technical debt
+• Suggested next engineering task
+
+Think like a senior engineer preparing this project for production rather than simply making it work.

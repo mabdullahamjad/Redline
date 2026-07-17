@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg: #0A0A0A;
+  --surface: #121212;
+  --surface-hover: #1A1A1A;
+  --surface-active: #222222;
+  
+  --border: #262626;
+  --border-strong: #333333;
+  --border-hover: #404040;
+  
+  --text-main: #EDEDED;
+  --text-muted: #888888;
+  --text-inverse: #0A0A0A;
+  
+  --accent: #EDEDED;
+  --accent-hover: #FFFFFF;
+  
+  --impact-high: #FF453A;
+  --impact-high-bg: rgba(255, 69, 58, 0.1);
+  --impact-med: #FF9F0A;
+  --impact-med-bg: rgba(255, 159, 10, 0.1);
+  --impact-low: #0A84FF;
+  --impact-low-bg: rgba(10, 132, 255, 0.1);
+  --impact-success: #32D74B;
+  
+  --ring: rgba(255, 255, 255, 0.2);
+}
+
+.terminal-theme {
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.terminal-theme * {
+  border-color: var(--border);
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.tabular-data {
+  font-variant-numeric: tabular-nums;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Base resets inside the theme */
+.terminal-theme input,
+.terminal-theme button {
+  font-family: inherit;
+}
+.terminal-theme input:focus {
+  outline: none;
+  border-color: var(--text-main);
+}

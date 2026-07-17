@@ -1,0 +1,290 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * REDLINE — premium dark fintech design system.
+ * All colors in oklch. Semantic tokens only — never hardcode colors in components.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-surface-active: var(--surface-active);
+
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* Dark by default */
+:root {
+  --radius: 0.875rem;
+
+  /* Base — deep near-black with subtle blue tint */
+  --background: oklch(0.16 0.015 250);
+  --foreground: oklch(0.97 0.005 250);
+
+  --surface: oklch(0.2 0.018 250);
+  --surface-2: oklch(0.235 0.02 250);
+
+  --card: oklch(0.2 0.018 250);
+  --card-foreground: oklch(0.97 0.005 250);
+  --popover: oklch(0.2 0.02 250);
+  --popover-foreground: oklch(0.97 0.005 250);
+
+  /* Cyan primary — fintech electric */
+  --primary: oklch(0.78 0.14 200);
+  --primary-foreground: oklch(0.15 0.02 250);
+
+  --secondary: oklch(0.27 0.02 250);
+  --secondary-foreground: oklch(0.97 0.005 250);
+
+  --muted: oklch(0.24 0.018 250);
+  --muted-foreground: oklch(0.68 0.015 250);
+
+  --accent: oklch(0.72 0.16 165);
+  --accent-foreground: oklch(0.15 0.02 250);
+
+  --destructive: oklch(0.66 0.22 22);
+  --destructive-foreground: oklch(0.98 0.005 22);
+
+  --success: oklch(0.74 0.16 155);
+  --success-foreground: oklch(0.15 0.02 250);
+
+  --warning: oklch(0.8 0.16 75);
+  --warning-foreground: oklch(0.18 0.03 75);
+
+  --border: oklch(0.3 0.015 250);
+  --input: oklch(0.28 0.015 250);
+  --ring: oklch(0.78 0.14 200);
+
+  --chart-1: oklch(0.78 0.14 200);
+  --chart-2: oklch(0.74 0.16 155);
+  --chart-3: oklch(0.8 0.16 75);
+  --chart-4: oklch(0.66 0.22 22);
+  --chart-5: oklch(0.7 0.18 300);
+
+  --sidebar: oklch(0.18 0.017 250);
+  --sidebar-foreground: oklch(0.92 0.008 250);
+  --sidebar-primary: oklch(0.78 0.14 200);
+  --sidebar-primary-foreground: oklch(0.15 0.02 250);
+  --sidebar-accent: oklch(0.24 0.02 250);
+  --sidebar-accent-foreground: oklch(0.97 0.005 250);
+  --sidebar-border: oklch(0.28 0.015 250);
+  --sidebar-ring: oklch(0.78 0.14 200);
+
+  /* Gradients + shadows */
+  --gradient-primary: linear-gradient(135deg, oklch(0.78 0.14 200) 0%, oklch(0.72 0.16 165) 100%);
+  --gradient-hero:
+    radial-gradient(1200px 600px at 15% -10%, oklch(0.78 0.14 200 / 0.18), transparent 60%),
+    radial-gradient(1000px 500px at 100% 10%, oklch(0.72 0.16 165 / 0.15), transparent 60%),
+    radial-gradient(800px 400px at 50% 100%, oklch(0.7 0.18 300 / 0.1), transparent 60%);
+  --gradient-card: linear-gradient(180deg, oklch(0.23 0.02 250 / 0.6), oklch(0.19 0.017 250 / 0.6));
+  --shadow-glow:
+    0 0 0 1px oklch(0.78 0.14 200 / 0.15), 0 20px 60px -20px oklch(0.78 0.14 200 / 0.35);
+  --shadow-card: 0 1px 0 0 oklch(1 0 0 / 0.04) inset, 0 20px 40px -20px oklch(0 0 0 / 0.5);
+}
+
+/*
+ * Terminal scope — used only by the authenticated app shell and the
+ * auth/reset-password screens. Overrides the tokens above via CSS variable
+ * cascade so the rest of the site (marketing pages) is completely
+ * unaffected. Bloomberg-terminal x Apple: flat near-black surfaces, hairline
+ * borders, monochrome UI chrome, color reserved for semantic status only.
+ */
+.app-terminal {
+  --radius: 0.125rem;
+
+  --background: #0a0a0a;
+  --foreground: #ededed;
+
+  --surface: #121212;
+  --surface-2: #1a1a1a;
+  --surface-active: #222222;
+
+  --card: #121212;
+  --card-foreground: #ededed;
+  --popover: #121212;
+  --popover-foreground: #ededed;
+
+  --primary: #ededed;
+  --primary-foreground: #0a0a0a;
+
+  --secondary: #1a1a1a;
+  --secondary-foreground: #ededed;
+
+  --muted: #1a1a1a;
+  --muted-foreground: #888888;
+
+  --accent: #1a1a1a;
+  --accent-foreground: #ededed;
+
+  --destructive: #ff453a;
+  --destructive-foreground: #0a0a0a;
+
+  --success: #32d74b;
+  --success-foreground: #0a0a0a;
+
+  --warning: #ff9f0a;
+  --warning-foreground: #0a0a0a;
+
+  --info: #0a84ff;
+  --info-foreground: #0a0a0a;
+
+  --border: #262626;
+  --input: #262626;
+  --ring: rgba(255, 255, 255, 0.25);
+
+  --sidebar: #121212;
+  --sidebar-foreground: #ededed;
+  --sidebar-primary: #ededed;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #1a1a1a;
+  --sidebar-accent-foreground: #ededed;
+  --sidebar-border: #262626;
+  --sidebar-ring: rgba(255, 255, 255, 0.25);
+
+  --gradient-primary: none;
+  --gradient-hero: none;
+  --gradient-card: none;
+  --shadow-glow: none;
+  --shadow-card: none;
+
+  color-scheme: dark;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Utilities that hardcode values instead of reading CSS variables need an
+   explicit override inside the terminal scope. */
+.app-terminal .text-gradient {
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: var(--foreground);
+}
+.app-terminal .glass {
+  background-color: var(--surface);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.app-terminal .gradient-card {
+  background-image: none;
+  background-color: var(--card);
+}
+.app-terminal .bg-grid {
+  background-image: none;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    /* Force dark scheme */
+    color-scheme: dark;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(1200px 600px at 100% -10%, oklch(0.78 0.14 200 / 0.06), transparent 60%),
+      radial-gradient(1000px 500px at -10% 20%, oklch(0.72 0.16 165 / 0.05), transparent 60%);
+    background-attachment: fixed;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility gradient-primary {
+  background-image: var(--gradient-primary);
+}
+@utility gradient-hero {
+  background-image: var(--gradient-hero);
+}
+@utility gradient-card {
+  background-image: var(--gradient-card);
+}
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+@utility text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@utility glass {
+  background-color: oklch(0.22 0.02 250 / 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid oklch(1 0 0 / 0.06);
+}
+
+/* Grid background pattern */
+@utility bg-grid {
+  background-image:
+    linear-gradient(oklch(1 0 0 / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}

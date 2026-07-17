@@ -1,0 +1,241 @@
+The application has been officially rebranded as REDLINE.
+
+The Dashboard, Admin, Settings and Authentication screens already follow the approved Terminal UI design.
+
+The ONLY remaining screen that still looks like a generic SaaS template is the public landing page.
+
+Your task is to redesign ONLY the landing page.
+
+DO NOT modify:
+- Dashboard
+- Admin
+- Settings
+- Authentication
+- Routing
+- Backend
+- Database
+- Authentication flow
+
+The landing page should become the marketing website for REDLINE.
+
+==================================================
+PRODUCT IDENTITY
+==================================================
+
+REDLINE is NOT a Forex website.
+
+REDLINE is a macroeconomic intelligence platform that helps traders stay ahead of market-moving events.
+
+Users receive intelligent email alerts before major economic releases affecting:
+
+• Forex
+• Bitcoin
+• Ethereum
+• Gold
+• Silver
+• Global Indices
+
+The product should feel like Bloomberg Terminal meets Apple—not a startup template.
+
+==================================================
+VISUAL STYLE
+==================================================
+
+Dark terminal aesthetic.
+
+Near-black backgrounds.
+
+Hairline borders.
+
+Inter for text.
+
+JetBrains Mono for numbers and timestamps.
+
+Very little decoration.
+
+No gradients.
+
+No glassmorphism.
+
+No floating blobs.
+
+No stock illustrations.
+
+No fake testimonials.
+
+No generic feature cards.
+
+The interface should communicate professionalism and trust.
+
+==================================================
+LANDING PAGE STRUCTURE
+==================================================
+
+SECTION 1
+
+Large logo.
+
+REDLINE
+
+Headline:
+
+Know Before the Market Moves.
+
+Subheadline:
+
+Personalized alerts before high-impact economic events affecting Forex, Crypto, Metals and Global Markets.
+
+Primary CTA
+
+Get Started
+
+Secondary CTA
+
+View Live Calendar
+
+==================================================
+
+SECTION 2
+
+LIVE MARKET SNAPSHOT
+
+Display realistic placeholder events in a professional table.
+
+Columns:
+
+Time
+
+Country
+
+Event
+
+Impact
+
+Markets Affected
+
+Countdown
+
+Example:
+
+08:30
+
+🇺🇸
+
+CPI Inflation
+
+HIGH
+
+USD • BTC • GOLD
+
+02:14:31
+
+==================================================
+
+SECTION 3
+
+HOW IT WORKS
+
+Display as a clean horizontal timeline.
+
+Choose Markets
+
+↓
+
+Choose Reminder Times
+
+↓
+
+Receive Intelligent Alerts
+
+==================================================
+
+SECTION 4
+
+WHY REDLINE
+
+Instead of feature cards, create terminal-style statistic panels.
+
+Examples:
+
+100+ Economic Events Tracked
+
+24h / 12h / 1h Alerts
+
+Forex
+
+Crypto
+
+Gold
+
+Silver
+
+Global Markets
+
+==================================================
+
+SECTION 5
+
+SCREENSHOT PREVIEW
+
+Create a realistic mock preview of the dashboard using existing components.
+
+Do not use fake browser windows.
+
+Use the real design system.
+
+==================================================
+
+SECTION 6
+
+FINAL CTA
+
+Ready to stay ahead of the market?
+
+Create your free account.
+
+==================================================
+
+FOOTER
+
+Minimal.
+
+Professional.
+
+==================================================
+DESIGN REQUIREMENTS
+==================================================
+
+The landing page must visually match the already implemented Terminal UI.
+
+Reuse existing colors.
+
+Reuse typography.
+
+Reuse spacing.
+
+Reuse components whenever possible.
+
+Do not introduce a second design language.
+
+Maintain excellent mobile responsiveness.
+
+Maintain accessibility.
+
+Maintain performance.
+
+==================================================
+IMPORTANT
+==================================================
+
+This is the FINAL visual identity for REDLINE.
+
+Do not redesign the application.
+
+Only replace the outdated landing page so it feels like it belongs to the same premium financial platform as the rest of the product.
+
+When finished:
+
+- verify the project builds successfully
+- verify routing still works
+- verify responsiveness
+- ensure no existing functionality has changed

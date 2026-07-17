@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap");
+
+/* REDLINE current design tokens — copied verbatim from src/styles.css so the
+   "Current" baseline mockup renders with the app's real colors, not sandbox defaults. */
+:root {
+  --radius: 0.875rem;
+  --background: oklch(0.16 0.015 250);
+  --foreground: oklch(0.97 0.005 250);
+  --surface: oklch(0.20 0.018 250);
+  --surface-2: oklch(0.235 0.02 250);
+  --card: oklch(0.20 0.018 250);
+  --card-foreground: oklch(0.97 0.005 250);
+  --popover: oklch(0.20 0.02 250);
+  --popover-foreground: oklch(0.97 0.005 250);
+  --primary: oklch(0.78 0.14 200);
+  --primary-foreground: oklch(0.15 0.02 250);
+  --secondary: oklch(0.27 0.02 250);
+  --secondary-foreground: oklch(0.97 0.005 250);
+  --muted: oklch(0.24 0.018 250);
+  --muted-foreground: oklch(0.68 0.015 250);
+  --accent: oklch(0.72 0.16 165);
+  --accent-foreground: oklch(0.15 0.02 250);
+  --destructive: oklch(0.66 0.22 22);
+  --destructive-foreground: oklch(0.98 0.005 22);
+  --success: oklch(0.74 0.16 155);
+  --success-foreground: oklch(0.15 0.02 250);
+  --warning: oklch(0.80 0.16 75);
+  --warning-foreground: oklch(0.18 0.03 75);
+  --border: oklch(0.30 0.015 250);
+  --input: oklch(0.28 0.015 250);
+  --ring: oklch(0.78 0.14 200);
+  --gradient-primary: linear-gradient(135deg, oklch(0.78 0.14 200) 0%, oklch(0.72 0.16 165) 100%);
+  --gradient-hero: radial-gradient(1200px 600px at 15% -10%, oklch(0.78 0.14 200 / 0.18), transparent 60%),
+                   radial-gradient(1000px 500px at 100% 10%, oklch(0.72 0.16 165 / 0.15), transparent 60%),
+                   radial-gradient(800px 400px at 50% 100%, oklch(0.70 0.18 300 / 0.10), transparent 60%);
+  --gradient-card: linear-gradient(180deg, oklch(0.23 0.02 250 / 0.6), oklch(0.19 0.017 250 / 0.6));
+  --shadow-glow: 0 0 0 1px oklch(0.78 0.14 200 / 0.15), 0 20px 60px -20px oklch(0.78 0.14 200 / 0.35);
+  --shadow-card: 0 1px 0 0 oklch(1 0 0 / 0.04) inset, 0 20px 40px -20px oklch(0 0 0 / 0.5);
+}
+
+.ep-current {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+.ep-current .font-display { font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif; letter-spacing: -0.02em; }
+.ep-current .gradient-primary { background-image: var(--gradient-primary); }
+.ep-current .gradient-hero { background-image: var(--gradient-hero); }
+.ep-current .gradient-card { background-image: var(--gradient-card); }
+.ep-current .shadow-glow { box-shadow: var(--shadow-glow); }
+.ep-current .shadow-card { box-shadow: var(--shadow-card); }
+.ep-current .text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.ep-current .bg-background { background-color: var(--background); }
+.ep-current .bg-surface { background-color: var(--surface); }
+.ep-current .bg-surface-2 { background-color: var(--surface-2); }
+.ep-current .bg-primary { background-color: var(--primary); }
+.ep-current .bg-primary\/10 { background-color: color-mix(in oklch, var(--primary) 10%, transparent); }
+.ep-current .text-foreground { color: var(--foreground); }
+.ep-current .text-muted-foreground { color: var(--muted-foreground); }
+.ep-current .text-primary { color: var(--primary); }
+.ep-current .border-border\/60 { border-color: color-mix(in oklch, var(--border) 60%, transparent); }

@@ -1,0 +1,3 @@
+- [Mockup sandbox first-run vite failure](mockup-sandbox-vite-missing.md) — new mockup-sandbox artifacts fail to start ("vite: not found") until `npm install` runs inside the artifact dir.
+- [Lovable tanstack-config IPv6 bind failure](lovable-vite-ipv6-bind.md) — main app dev server fails with EAFNOSUPPORT on `::` in this container; fix via vite.config.ts override.
+- [Scoped re-theme via CSS variable cascade](scoped-retheme-css-scope.md) — pattern for re-skinning part of an app (e.g. authenticated shell) without touching a shared marketing/landing page that reads the same token names.
